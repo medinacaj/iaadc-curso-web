@@ -1,0 +1,25 @@
+name: Verificar videoteca IAADC
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validar datos públicos
+        run: python3 scripts/validate_videos.py
+      - name: Sintaxis JavaScript
+        run: |
+          node --check course-data.js
+          node --check site.js
+          node --check videos.js
