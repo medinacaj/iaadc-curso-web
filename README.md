@@ -13,4 +13,4 @@ La inscripción no está habilitada; no se recopilan datos desde este sitio.
 ```
 - Ejecutar `python3 scripts/validate_videos.py` y `node --check videos.js`.
 
-La producción audiovisual privada se encuentra como integración separada de MultiX 1.4 y no afecta la biblioteca académica original.
+La producción audiovisual de IAADC es independiente de MultiX. MultiX sirve únicamente como referencia de experiencia; no existe integración, conexión ni sincronización entre ambos sistemas.
